@@ -1,12 +1,13 @@
 import { useState } from "react"
 import Header from "./components/Header"
 import Button from "./components/Button"
-import { formatearDinero } from './helpers/index.js'
+import { formatearDinero, calcularTotalPagar } from './helpers/index.js'
 
 function App() {
 
   const [cantidad, setCantidad ] = useState(10000);
   const [meses, setMeses] = useState(6);
+  const [total, setTotal ] = useState(0);
 
   const MIN = 0;
   const MAX = 20000;
